@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Wordle.CSS">
+    <title>Wordle</title>
+</head>
+<body>
+    
+    <h1>Wordle</h1>
+
+    <table class="center">
+        <tr>
+            <td><input class="row1" type="text" id="txt11" value="" maxlength="1" autofocus onkeyup="nextBox(this,document.getElementById('txt12'),document.getElementById('txt11'))" onkeypress="replaceText(this)"></td>
+            <td><input class="row1" type="text" id="txt12" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt13'),document.getElementById('txt11'))" onkeypress="replaceText(this)"></td>
+            <td><input class="row1" type="text" id="txt13" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt14'),document.getElementById('txt12'))" onkeypress="replaceText(this)"></td>
+            <td><input class="row1" type="text" id="txt14" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt15'),document.getElementById('txt13'))" onkeypress="replaceText(this)"></td>
+            <td><input class="row1" type="text" id="txt15" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('btnCheck'),document.getElementById('txt14'))" onkeypress="replaceText(this)"></td>
+        </tr>
+        <tr>
+            <td><input disabled class="row2" type="text" id="txt21" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt22'),document.getElementById('txt21'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row2" type="text" id="txt22" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt23'),document.getElementById('txt21'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row2" type="text" id="txt23" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt24'),document.getElementById('txt22'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row2" type="text" id="txt24" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt25'),document.getElementById('txt23'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row2" type="text" id="txt25" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('btnCheck'),document.getElementById('txt24'))" onkeypress="replaceText(this)"></td>
+        </tr>
+        <tr>
+            <td><input disabled class="row3" type="text" id="txt31" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt32'),document.getElementById('txt31'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row3" type="text" id="txt32" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt33'),document.getElementById('txt31'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row3" type="text" id="txt33" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt34'),document.getElementById('txt32'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row3" type="text" id="txt34" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt35'),document.getElementById('txt33'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row3" type="text" id="txt35" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('btnCheck'),document.getElementById('txt34'))" onkeypress="replaceText(this)"></td>
+        </tr>
+        <tr>
+            <td><input disabled class="row4" type="text" id="txt41" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt42'),document.getElementById('txt41'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row4" type="text" id="txt42" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt43'),document.getElementById('txt41'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row4" type="text" id="txt43" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt44'),document.getElementById('txt42'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row4" type="text" id="txt44" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt45'),document.getElementById('txt43'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row4" type="text" id="txt45" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('btnCheck'),document.getElementById('txt44'))" onkeypress="replaceText(this)"></td>
+        </tr>
+        <tr>
+            <td><input disabled class="row5" type="text" id="txt51" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt52'),document.getElementById('txt51'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row5" type="text" id="txt52" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt53'),document.getElementById('txt51'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row5" type="text" id="txt53" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt54'),document.getElementById('txt52'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row5" type="text" id="txt54" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt55'),document.getElementById('txt53'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row5" type="text" id="txt55" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('btnCheck'),document.getElementById('txt54'))" onkeypress="replaceText(this)"></td>
+        </tr>
+        <tr>
+            <td><input disabled class="row6" type="text" id="txt61" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt62'),document.getElementById('txt61'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row6" type="text" id="txt62" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt63'),document.getElementById('txt61'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row6" type="text" id="txt63" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt64'),document.getElementById('txt62'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row6" type="text" id="txt64" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('txt65'),document.getElementById('txt63'))" onkeypress="replaceText(this)"></td>
+            <td><input disabled class="row6" type="text" id="txt65" value="" maxlength="1" onkeyup="nextBox(this,document.getElementById('btnCheck'),document.getElementById('txt64'))" onkeypress="replaceText(this)"></td>
+        </tr>
+    </table>
+
+    <input type="button" id="btnCheck" value="Check" onclick=main()>
+
+    <span id="checkSpace"></span>
+
+    <script>
+
+        "use strict";
+        
+        let myHistory=new Array(5);
+        let count=1;
+
+        let words = ['scram', 'paper', 'roots', 'ladle', 'fable', 'treat', 'fizzy', 'aster', 'anger', 'hymns'];
+        let myWord=words[Math.floor(Math.random() * words.length)];  
+
+        function main(){
+
+            let myRow="row"+count; //keep count of 6 guesses with class ID (ex."row2")
+        
+            //CONTROL ROWS
+            for(let i=1;i<=6;i++){ //loops from rows 1-6
+                let nextRow="row"+Number(count+1); //the row we want to be accessible (next row)
+                let testRowNum="row"+i; //the current row
+
+                for(let j=0;j<5;j++){ //loops from item 0-4 in each row
+                    let id="txt"+String(i)+String(j+1); //gets the id needed from the row (outer loop) and item (inner loop+1)
+                    let item=document.getElementById(id); 
+
+                    if(testRowNum==nextRow){ //if it's the next row, make it editable
+                        item.removeAttribute("disabled","disabled");
+                    }
+                    else if(testRowNum!==nextRow){ //disable the rest
+                        item.setAttribute("disabled","disabled");
+                    }
+                }
+            }            
+            
+            //ASSESS INPUT
+            let myGuess=getGuess(myRow); //get player input
+            let myResult=checkWord(myWord,myGuess); //get result of checked player guess
+            print(myRow,myGuess,myResult); //display result
+
+            //INTERPRET RESULT
+            if(myResult=="winner"){
+                //make all boxes uneditable
+                for(let i=1;i<=6;i++){ //loops from rows 1-6
+
+                    for(let j=0;j<5;j++){ //loops from item 0-4 in each row
+                        let id="txt"+String(i)+String(j+1); //gets the id needed from the row (outer loop) and item (inner loop+1)
+                        let item=document.getElementById(id); 
+
+                        item.setAttribute("disabled","disabled");
+                    }   
+                } 
+                let item=document.getElementById("btnCheck"); 
+                item.setAttribute("disabled","disabled");
+                   
+                alert("You win!");
+            }
+            else if(myRow=="row6"&&myResult!=="winner"){ 
+                document.getElementById("btnCheck").setAttribute("disabled","disabled");
+                alert("You lose! The word was " + myWord);
+
+            }
+            else if(myRow!=="row6"){
+                let rowFocus="txt"+String(count+1)+"1";
+                document.getElementById(rowFocus).focus();
+            }
+            
+            count++;
+        }
+
+        function getGuess(myRow){ //return array for player input to be used for checking
+            let checkedArray=new Array();
+
+            var elements=document.getElementsByClassName(myRow);
+
+            for(let i=0;i<5;i++){
+                let textBox=elements.item(i);
+                checkedArray.push(textBox.value);
+            }
+
+            return checkedArray;
+        }
+
+        function letterInWord(word, letter){
+            for(let i = 0; i < word.length; i++){
+               if(word.charAt(i) == letter){
+                    return true;
+               }
+            }
+            return false;
+        }
+
+        function checkWord(word,guess){ //returns string of which characters are right and which are wrong
+        
+            for(let i=0;i<word.length;i++){
+                if(word[i].toUpperCase()==guess[i].toUpperCase()){
+                    myHistory[i]="green";
+                }
+                else if(letterInWord(myWord, guess[i])){
+                    myHistory[i]="yellow";
+                }
+                else{
+                    myHistory[i]="red";
+                }
+            }
+
+            if(myHistory[0]=="green"&&myHistory[1]=="green"&&myHistory[2]=="green"&&myHistory[3]=="green"&&myHistory[4]=="green"){
+                return "winner";
+            }
+            else{
+                return myHistory;
+            }
+
+        }
+
+        function print(row,guess,checkedWord){ //change interface according to accuracy of player guess
+
+            var elements=document.getElementsByClassName(row);
+           
+            for(let i=0;i<5;i++){
+                let textBox=elements.item(i);
+                textBox.value=guess[i];
+                
+                if(myHistory[i]=="red")
+                    textBox.style.backgroundColor="red";
+                if(myHistory[i]=="green")
+                    textBox.style.backgroundColor="green";
+                if(myHistory[i]=="yellow")
+                    textBox.style.backgroundColor="yellow";
+            }
+        }
+
+        
+        function strToArray(word){ //changes input string to array, not necessary
+            let length=word.length;
+            let string=new Array();
+
+            for(let i=0;i<length;i++){
+                string.push(word.charAt(i));
+            }
+
+            return string;
+        }
+
+    
+
+        function nextBox(field,nextFieldId,pastFieldId){ //control moving to next box after input
+            var key = event.keyCode || event.charCode;
+
+            if(key==37){
+                pastFieldId.focus();
+            }
+            else if(key==8&&field.value.length==0){
+                pastFieldId.focus();
+            }
+            else if(key==39&&nextFieldId.value.length!==0){
+                nextFieldId.focus();
+            }
+            else if(field.value.length>0){
+                nextFieldId.focus();
+            }
+            
+        }
+
+        function replaceText(field){
+            var key = event.key;
+            field.value=key;
+        }
+
+
+    </script>
+
+</body>
+</html>

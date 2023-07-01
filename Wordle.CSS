@@ -1,0 +1,41 @@
+/*universal styling*/
+body {
+    background-color: #f2eeca;
+    font-family: "Monaco", monospace;
+    text-align: center;
+
+}
+
+/*elements*/
+table{
+    width: 30%;
+}
+
+td{
+    height: 30px;
+    padding-top: 8%;
+}
+
+/*text and buttons*/
+input[type=text]{
+    font-family: "Monaco", monospace;
+    color:rgb(29, 29, 29);
+    width: 80%;
+    height: 150%;
+    text-align: center;
+    font-size: 30px;
+}
+
+input[type=button]{
+    border-radius: 8px;
+    margin-top:3%;
+    font-size: 20px;
+    width: 5%;
+    height:auto;
+}
+
+/*classes*/
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
